@@ -65,3 +65,11 @@
         background-color: lighten($red, 35%);
     }
 }
+
+.welcome-section__slide-down-arrow {
+    fill: $white;
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
