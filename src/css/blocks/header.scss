@@ -1,0 +1,38 @@
+.header {
+    background-color: $white;
+    padding: 22px 0;
+}
+
+.header__inner {
+    @include inner;
+    max-width: 1750px;
+    align-items: center;
+}
+
+.header__logo {
+    width: 168px;
+    height: auto;
+}
+
+.header__contacts-box {
+    text-align: right;
+}
+
+.header__phone-number {
+    font-size: 24px;
+    font-weight: $bold;
+    display: block;
+}
+
+.header__callback-button {
+    font-size: 18px;
+    font-weight: $semibold;
+    text-transform: uppercase;
+    border-bottom: 1px solid $text-color;
+    transition: .25s color ease, .25s border-bottom-color ease;
+
+    &:hover, &:focus {
+        color: $red;
+        border-bottom-color: $red;
+    }
+}

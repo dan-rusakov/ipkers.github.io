@@ -1,0 +1,21 @@
+.main-menu__item {
+    display: inline-block;
+    margin-right: 40px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.main-menu__link {
+    font-size: 18px;
+    font-weight: $semibold;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 3px;
+    transition: .25s border-color ease;
+
+    &:hover, &:focus {
+        border-bottom-color: $text-color;
+    }
+}
