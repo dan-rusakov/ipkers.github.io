@@ -1,0 +1,67 @@
+.welcome-section {
+    height: 800px;
+    background-color: $white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+.welcome-section__inner {
+    @include inner;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome-section__title {
+    font-size: 48px;
+    font-weight: $bold;
+    text-transform: uppercase;
+    line-height: 1.1;
+    max-width: 780px;
+    margin-bottom: 20px;
+}
+
+.welcome-section__description {
+    font-size: 24px;
+    max-width: 655px;
+    margin-bottom: 30px;
+}
+
+.welcome-section__callback-button {
+    width: 250px;
+    margin-right: 12px;
+}
+
+.welcome-section__schedule-link {
+    width: 250px;
+}
+
+.welcome-section__social-list {
+    position: absolute;
+    top: 60px;
+    right: 146px;
+}
+
+.welcome-section__social-item {
+    margin-bottom: 11px;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.welcome-section__social-link {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+    border-radius: 50%;
+    transition: .25s background-color ease;
+
+    &:hover, &:focus {
+        background-color: lighten($red, 35%);
+    }
+}
