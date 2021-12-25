@@ -2,17 +2,14 @@ const { src, series, parallel, dest, watch } = require('gulp');
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 const autoprefixer = require('gulp-autoprefixer');
-const babel = require('gulp-babel');
-const concat = require('gulp-concat');
-const iife = require('gulp-iife');
-const uglify = require('gulp-uglify');
 const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
 const clean = require('gulp-clean');
 const browserSync = require('browser-sync').create();
 const rename = require("gulp-rename");
 const inject = require('gulp-inject');
-const eslint = require('gulp-eslint');
+const compiler = require('webpack');
+const webpack = require('webpack-stream');
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -52,37 +49,17 @@ function css() {
   }
 }
 
-function libs() {
-  return src('./src/libs/**/*.js')
-    .pipe(concat('libs.min.js'))
-    .pipe(uglify())
-    .pipe(dest('./dist/js/'))
-    .pipe(browserSync.stream())
-}
-
 function js() {
-  return src('./src/js/*.js')
-    .pipe(sourcemaps.init())
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError())
-    .pipe(babel())
-    .pipe(iife({ useStrict: false }))
-    .pipe(concat('main.js'))
-    .pipe(sourcemaps.write())
-    .pipe(dest('./dist/js/'))
-    .pipe(browserSync.stream())
+  return src('./src/js/app.js')
+    .pipe(webpack(require('./webpack.config.js')), compiler)
+    .pipe(dest('./dist/js'))
+    .pipe(browserSync.stream());
 }
 
 function bundleJs() {
-  return src('./src/libs/**/*.js')
-    .pipe(src('./src/js/*.js'))
-    .pipe(babel())
-    .pipe(uglify())
-    .pipe(iife({ useStrict: false }))
-    .pipe(concat('bundle.min.js'))
-    .pipe(uglify())
-    .pipe(dest('./dist/js/'))
+  return src('./src/js/app.js')
+    .pipe(webpack(require('./webpack.config.js')))
+    .pipe(dest('./dist/js'))
 }
 
 function fonts() {
@@ -118,7 +95,6 @@ function server() {
 
 function watchFiles() {
   watch(['./src/css/**/*.scss'], css);
-  watch(['./src/libs/**/*.js'], libs);
   watch(['./src/js/*.js'], js);
   watch(['./src/fonts/**/*'], fonts);
   watch(['./src/img/*'], img);
@@ -127,4 +103,4 @@ function watchFiles() {
 }
 
 exports.build = series(cleanDist, parallel(css, fonts, img, bundleJs), html);
-exports.default = series(cleanDist, parallel(css, fonts, img, js, libs), html, watchFiles);
+exports.default = series(cleanDist, parallel(css, fonts, img, js), html, watchFiles);
