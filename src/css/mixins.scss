@@ -4,7 +4,8 @@
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: flex-start;
-  width: $site-width;
+  width: auto;
+  max-width: $site-width;
   height: inherit;
   margin: 0 auto;
   padding: 0 $site-gutter;

@@ -4,8 +4,12 @@
 @import "mixins";
 @import "base";
 
+@import "../../node_modules/@glidejs/glide/dist/css/glide.core.min";
+
 @import "blocks/general";
 @import "blocks/button";
 @import "blocks/header";
 @import "blocks/main-menu";
 @import "blocks/welcome-section";
+@import "blocks/tour-card";
+@import "blocks/current-tours";
