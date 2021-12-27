@@ -1,0 +1,18 @@
+.advantage-card {
+    display: flex;
+    align-items: flex-start;
+}
+
+.advantage-card__img {
+    margin-right: 28px;
+}
+
+.advantage-card__title {
+    font-size: 24px;
+    font-weight: $semibold;
+    margin-bottom: 15px;
+}
+
+.advantage-card__text {
+    font-size: 18px;
+}
