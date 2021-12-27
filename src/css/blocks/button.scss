@@ -11,6 +11,7 @@
     transition: .25s background-color ease;
 
     &:hover, &:focus {
+        outline: none;
         background-color: lighten($red, 10%);
     }
 }
@@ -29,6 +30,7 @@
     transition: .25s background-color ease;
 
     &:hover, &:focus {
+        outline: none;
         background-color: lighten($red, 40%);
     }
 }
