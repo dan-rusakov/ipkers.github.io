@@ -1,0 +1,46 @@
+.reviews-section {
+    padding: 100px 0;
+    background-color: #f4f4f4;
+}
+
+.reviews-section__inner {
+    @include inner;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews-section__title {
+    font-size: 48px;
+    font-weight: $bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.reviews-section__description {
+    font-size: 24px;
+    margin-bottom: 90px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.reviews-section__reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+    margin-bottom: 70px;
+}
+
+.reviews-section__logo {
+    margin-right: 10px;
+}
+
+.reviews-section__show-more-button {
+    width: 250px;
+    background-color: $green;
+
+    &:hover, &:focus {
+        background-color: lighten($green, 10%);
+    }
+}
