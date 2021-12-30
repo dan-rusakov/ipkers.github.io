@@ -61,11 +61,6 @@
     text-transform: uppercase;
 }
 
-.footer__right-text-box {
-    text-align: right;
-    margin-right: 85px;
-}
-
 .footer__phone {
     font-size: 24px;
     color: $white;
@@ -109,10 +104,6 @@
     }
 }
 
-.footer__slide-arrow {
-    fill: $white;
-}
-
 .footer__right-content {
-    display: flex;
+    text-align: right;
 }
