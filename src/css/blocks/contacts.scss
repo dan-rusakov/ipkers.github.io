@@ -82,6 +82,7 @@
 .contacts__input {
     width: 305px;
     margin-bottom: 10px;
+    border-color: $gray;
 }
 
 .contacts__submit {
@@ -103,7 +104,7 @@
     position: relative;
     display: inline-block;
     margin-right: 17px;
-    border: 1px solid transparent;
+    border: 1px solid $gray;
 
     &::before {
         content: "";

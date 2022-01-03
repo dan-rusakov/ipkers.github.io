@@ -32,7 +32,7 @@
                 <a href="tel:89874962120" class="header__phone-number">
                     8(987) 496-21-20
                 </a>
-                <button class="header__callback-button" type="button">
+                <button class="header__callback-button js--open-callback-modal" type="button">
                     заказать звонок
                 </button>
             </div>
@@ -46,7 +46,7 @@
             <p class="welcome-section__description">Квалифицированные инструктора, вкусная еда от шефа 
                 и комфортабельные автобусы</p>
             <div class="welcome-section__action-box">
-                <button class="main-button welcome-section__callback-button">
+                <button class="main-button welcome-section__callback-button js--open-callback-modal">
                     ЗАКАжи ЗВОНОК
                 </button>
                 <a href="#schedule-section" class="secondary-button welcome-section__schedule-link">
@@ -757,7 +757,7 @@
                 <p class="footer__phone">
                     8(987) 496-21-20
                 </p>
-                <button type="button" class="footer__callback-button">
+                <button type="button" class="footer__callback-button js--open-callback-modal">
                     заказать звонок
                 </button>
                 <ul class="footer__social-list">
@@ -793,6 +793,31 @@
             </div>
         </div>
     </footer>
+
+    <div class="callback-modal-wrapper js--callback-modal" style="display: none;">
+        <div class="callback-modal">
+            <h3 class="callback-modal__title">
+                заказать звонок
+            </h3>
+            <p class="callback-modal__description">
+                Заполните форму ниже и мы Вам перезвоним
+            </p>
+            <form action="/" class="callback-modal__form">
+                <input type="text" class="main-input callback-modal__input" placeholder="Имя">
+                <input type="text" class="main-input callback-modal__input" placeholder="Телефон">
+                <button type="submit" class="main-button callback-modal__submit">
+                    перезвоните мне
+                </button>
+                <label class="callback-modal__checkbox-label">
+                    <input type="checkbox" class="callback-modal__checkbox-input visually-hidden">
+                    <span class="callback-modal__checkbox"></span>
+                    <p class="callback-modal__checkbox-text">
+                        Я согласен на обработку персональных данных
+                    </p>
+                </label>
+            </form>
+        </div>
+    </div>
     
 
     <svg style="display: none;">
