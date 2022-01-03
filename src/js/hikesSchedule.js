@@ -2,7 +2,7 @@ const infoButtons = Array.from(document.querySelectorAll('.js--month-info-button
 
 infoButtons.forEach(button => {
     button.addEventListener('click', (evt) => {
-        evt.target.classList.toggle('active');
+        evt.currentTarget.classList.toggle('active');
     });
 });
 
