@@ -1,12 +1,18 @@
 .header {
     background-color: $white;
     padding: 22px 0;
+    position: relative;
 }
 
 .header__inner {
     @include inner;
     max-width: 1750px;
     align-items: center;
+    flex-wrap: nowrap;
+}
+
+.header__logo-url {
+    flex-shrink: 0;
 }
 
 .header__logo {
@@ -16,6 +22,7 @@
 
 .header__contacts-box {
     text-align: right;
+    flex-shrink: 0;
 }
 
 .header__phone-number {
@@ -34,5 +41,120 @@
     &:hover, &:focus {
         color: $red;
         border-bottom-color: $red;
+    }
+}
+
+.header__navigation {
+    margin: 0 45px;
+}
+
+.header__burger-button {
+    width: 31px;
+    height: 22px;
+    display: none;
+    position: relative;
+
+    &::before {
+        display: none;
+        content: '';
+        width: 70px;
+        height: 55px;
+        background-color: $text-color;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.header__burger-button.active {
+    .header__burger {
+        background-color: transparent;
+
+        &::before {
+            transform: rotate(45deg);
+            top: 0;
+            background-color: $white;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+            bottom: 0;
+            background-color: $white;
+        }
+    }
+
+    &::before {
+        display: block;
+    }
+}
+
+.header__burger {
+    display: block;
+    width: 31px;
+    height: 2px;
+    background-color: $text-color;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 31px;
+        height: 2px;
+        background-color: $text-color;
+        position: absolute;
+        top: -10px;
+        left: 0;
+        transition: .25s transform ease;
+    }
+
+    &::after {
+        content: '';
+        width: 31px;
+        height: 2px;
+        background-color: $text-color;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        transition: .25s transform ease;
+    }
+}
+
+@include screen-sm {
+    .header__phone-number {
+        font-size: 18px;
+    }
+
+    .header__callback-button {
+        font-size: 14px;
+    }
+
+    .header__navigation {
+        margin: 0 25px;
+    }
+
+    .header__logo {
+        width: 98px;
+    }
+
+    .header {
+        font-size: 18px;
+    }
+}
+
+@include tablet-lg {
+    .header__navigation {
+        display: none;
+    }
+
+    .header__contacts-box {
+        display: none;
+    }
+
+    .header {
+        padding: 10px 5px;
+    }
+
+    .header__burger-button {
+        display: block;
     }
 }
