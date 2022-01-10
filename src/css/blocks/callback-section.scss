@@ -65,6 +65,7 @@
     display: inline-block;
     margin-right: 17px;
     border: 1px solid transparent;
+    flex-shrink: 0;
 
     &::before {
         content: "";
@@ -90,4 +91,75 @@
 
 .callback-section__checkbox-text {
     font-size: 18px;
+}
+
+@include tablet-lg {
+    .callback-section__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .callback-section__input {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .callback-section__description {
+        margin-bottom: 50px;
+    }
+}
+
+@include tablet-md {
+    .callback-section__title {
+        font-size: 32px;
+    }
+
+    .callback-section__description {
+        font-size: 18px;
+    }
+
+    .callback-section__logo {
+        display: none;
+    }
+}
+
+@include tablet-sm {
+    .callback-section {
+        padding: 70px 0;
+    }
+    
+    .callback-section__title {
+        font-size: 26px;
+    }
+
+    .callback-section__description {
+        margin-bottom: 40px;
+    }
+
+    .callback-section__carousel {
+        margin-bottom: 40px;
+    }
+
+    .callback-section__checkbox-text {
+        font-size: 14px;
+    }
+
+    .callback-section__checkbox-label {
+        width: 210px;
+    }
+
+    .callback-section__form {
+        width: 100%;
+    }
+}
+
+@include phone-lg {
+    .callback-section__input {
+        width: 100%;
+    }
+
+    .callback-section__submit {
+        width: 100%;
+    }
 }
