@@ -16,3 +16,40 @@
 .advantage-card__text {
     font-size: 18px;
 }
+
+@include screen-md {
+    .advantage-card__img {
+        width: 80px;
+        margin-right: 20px;
+    }
+}
+
+@include screen-sm {
+    .advantage-card__title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .advantage-card__text {
+        font-size: 16px;
+    }
+
+    .advantage-card__img {
+        width: 60px;
+    }
+}
+
+@include tablet-sm {
+    .advantage-card__img {
+        margin-right: 15px;
+    }
+
+    .advantage-card__title {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .advantage-card__text {
+        font-size: 14px;
+    }
+}
