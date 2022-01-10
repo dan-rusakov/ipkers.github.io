@@ -5,6 +5,14 @@ if (document.querySelector('.js--current-tours-carousel')) {
         bound: true,
         gap: 50,
         perView: 4,
+        breakpoints: {
+            690: { perView: 1 },
+            920: {
+                perView: 2,
+                gap: 30
+            },
+            1240: { perView: 3 }
+        }
     }).mount();
     const carouselProgress = document.querySelector('.js--current-tours-carousel-progress');
 

@@ -78,3 +78,55 @@
     transform-origin: left;
     transition: .25s transform ease;
 }
+
+@include tablet-lg {
+    .current-tours__description {
+        margin-bottom: 50px;
+    }
+
+    .current-tours__carousel {
+        margin-bottom: 50px;
+    }
+}
+
+@include tablet-md {
+    .current-tours__title {
+        font-size: 32px;
+    }
+
+    .current-tours__description {
+        font-size: 18px;
+    }
+
+    .current-tours__logo {
+        display: none;
+    }
+}
+
+@include tablet-sm {
+    .current-tours {
+        padding: 70px 0;
+    }
+    
+    .current-tours__title {
+        font-size: 26px;
+    }
+
+    .current-tours__description {
+        margin-bottom: 40px;
+    }
+
+    .current-tours__carousel {
+        margin-bottom: 40px;
+    }
+}
+
+@include phone-lg {
+    .current-tours__carousel__inner {
+        margin: 0;
+    }
+
+    .current-tours__controls {
+        display: none;
+    }
+}
