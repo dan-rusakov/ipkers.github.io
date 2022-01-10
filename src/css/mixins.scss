@@ -63,8 +63,14 @@
   }
 }
 
-@mixin phone-sm() {
+@mixin phone-md() {
   @media screen and (max-width: 400px) {
+    @content;
+  }
+}
+
+@mixin phone-sm() {
+  @media screen and (max-width: 374px) {
     @content;
   }
 }
