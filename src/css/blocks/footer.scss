@@ -107,3 +107,46 @@
 .footer__right-content {
     text-align: right;
 }
+
+@include screen-sm {
+    .footer__menu {
+        display: none;
+    }
+}
+
+@include tablet-md {
+    .footer__inner {
+        grid-template-columns: 1fr;
+        grid-row-gap: 16px;
+    }
+
+    .footer__left-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .footer__right-content {
+        text-align: center;
+    }
+
+    .footer__social-list {
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .footer__phone {
+        display: none;
+    }
+
+    .footer__callback-button {
+        display: none;
+    }
+
+    .footer__center-content {
+        order: 1;
+    }
+
+    .footer__policy-text {
+        margin-bottom: 15px;
+    }
+}
