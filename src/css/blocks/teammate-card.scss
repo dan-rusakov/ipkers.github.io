@@ -39,3 +39,22 @@
         background-color: lighten($green, 10%);
     }
 }
+
+@include tablet-lg {
+    .teammate-card__img-box {
+        width: 140px;
+        height: 140px;
+    }
+
+    .teammate-card__name {
+        font-size: 18px;
+    }
+
+    .teammate-card__profession {
+        font-size: 18px;
+    }
+
+    .teammate-card__text {
+        font-size: 14px;
+    }
+}

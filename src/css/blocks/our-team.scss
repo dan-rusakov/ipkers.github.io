@@ -35,3 +35,61 @@
     grid-gap: 90px 20px;
     margin-bottom: 110px;
 }
+
+@include screen-md {
+    .our-team__teammates-grid {
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 70px;
+    }
+}
+
+@include tablet-lg {
+    .our-team__description {
+        margin-bottom: 50px;
+    }
+
+    .our-team__teammates-grid {
+        grid-row-gap: 50px;
+    }
+}
+
+@include tablet-md {
+    .our-team__title {
+        font-size: 32px;
+    }
+
+    .our-team__description {
+        font-size: 18px;
+    }
+
+    .our-team__logo {
+        display: none;
+    }
+
+    .our-team__teammates-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-bottom: 50px;
+        grid-row-gap: 40px;
+    }
+}
+
+@include tablet-sm {
+    .our-team {
+        padding: 70px 0;
+    }
+    
+    .our-team__title {
+        font-size: 26px;
+    }
+
+    .our-team__description {
+        margin-bottom: 40px;
+    }
+}
+
+@include phone-lg {
+    .our-team__show-more-button {
+        width: 100%;
+    }
+}
