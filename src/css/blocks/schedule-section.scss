@@ -162,3 +162,139 @@
 .schedule-section__event-date {
     color: $text-color;
 }
+
+.schedule-section__show-months-button {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: $semibold;
+    color: $green;
+    border-bottom: 1px solid $green;
+    display: none;
+    margin-top: 15px;
+}
+
+@include tablet-lg {
+    .schedule-section__schedule-types {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 20px;
+    }
+
+    .schedule-section__description {
+        margin-bottom: 50px;
+    }
+
+    .schedule-section__month-header {
+        padding: 20px;
+    }
+
+    .schedule-section__month-body {
+        padding: 0 20px 20px;
+    }
+
+    .schedule-section__calendar-mark {
+        margin-bottom: 30px;
+        font-size: 20px;
+    }
+}
+
+@include tablet-md {
+    .schedule-section__title {
+        font-size: 32px;
+    }
+
+    .schedule-section__description {
+        font-size: 18px;
+    }
+
+    .schedule-section__logo {
+        display: none;
+    }
+
+    .schedule-section__type-button {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .schedule-section__calendar-mark {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+}
+
+@include tablet-sm {
+    .schedule-section {
+        padding: 70px 0;
+    }
+    
+    .schedule-section__title {
+        font-size: 26px;
+    }
+
+    .schedule-section__description {
+        margin-bottom: 40px;
+    }
+
+    .schedule-section__carousel {
+        margin-bottom: 40px;
+    }
+
+    .schedule-section__schedule-types {
+        grid-template-columns: 1fr;
+        grid-row-gap: 5px;
+    }
+
+    .schedule-section__calendar-mark {
+        display: none;
+    }
+
+    .schedule-section__month-body {
+        display: block;
+        padding: 0 0 15px;
+    }
+
+    .schedule-section__toggle-sign {
+        display: none;
+    }
+
+    .schedule-section__month {
+        display: none;
+
+        &:first-child {
+            display: block;
+            border-top-width: 0;
+        }
+
+        &:last-child {
+            border-bottom-width: 0;
+        }
+    }
+
+    .schedule-section__months-list.show-full .schedule-section__month {
+        display: block;
+    }
+
+    .schedule-section__month-header {
+        padding: 10px 0;
+    }
+
+    .schedule-section__event-link {
+        line-height: 1.6;
+        font-size: 14px;
+    }
+
+    .schedule-section__month-title {
+        font-size: 18px;
+    }
+
+    .schedule-section__schedule-types {
+        margin-bottom: 30px;
+    }
+
+    .schedule-section__show-months-button {
+        display: block;
+
+        &.hidden {
+            display: none;
+        }
+    }
+}
