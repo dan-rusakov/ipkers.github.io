@@ -52,3 +52,51 @@
         opacity: 0.6;
     }
 }
+
+@include screen-sm {
+    .review-card__text {
+        font-size: 16px;
+    }
+
+    .review-card__read-more-button {
+        font-size: 16px;
+    }
+}
+
+@include tablet-lg {
+    .review-card__img-box {
+        width: 50px;
+        height: 50px;
+        margin-right: 12px;
+    }
+
+    .review-card__reviewer-name {
+        font-size: 14px;
+        margin-bottom: 5px;
+        margin-right: 0;
+    }
+
+    .review-card__header {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .review-card__read-more-button {
+        font-size: 14px;
+    }
+
+    .review-card__review-date {
+        font-size: 14px;
+    }
+}
+
+@include phone-lg {
+    .review-card {
+        border-bottom: 1px solid $gray;
+        padding: 25px 0;
+
+        &:last-child {
+            border-bottom-width: 0;
+        }
+    }
+}
