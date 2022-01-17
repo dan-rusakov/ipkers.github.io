@@ -46,7 +46,7 @@
     display: flex;
     align-items: flex-start;
     cursor: pointer;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .callback-modal__checkbox {
@@ -57,6 +57,7 @@
     display: inline-block;
     margin-right: 17px;
     border: 1px solid $gray;
+    flex-shrink: 0;
 
     &::before {
         content: "";
@@ -82,4 +83,54 @@
 
 .callback-modal__checkbox-text {
     font-size: 18px;
+    text-align: left;
+}
+
+@include tablet-lg {
+    .callback-modal {
+        padding: 40px;
+    }
+
+    .callback-modal__title {
+        font-size: 28px;
+    }
+
+    .callback-modal__description {
+        font-size: 16px;
+    }
+
+    .callback-modal__checkbox-text {
+        font-size: 16px;
+    }
+}
+
+@include phone-lg {
+    .callback-modal {
+        padding: 50px 15px;
+    }
+
+    .callback-modal__title {
+        font-size: 20px;
+    }
+
+    .callback-modal__description {
+        font-size: 14px;
+    }
+
+    .callback-modal__checkbox-text {
+        font-size: 14px;
+    }
+
+    .callback-modal__input {
+        width: 100%;
+    }
+
+    .callback-modal__submit {
+        width: 100%;
+    }
+
+    .callback-modal__checkbox-label {
+        width: 220px;
+        margin: 0 auto;
+    }
 }
