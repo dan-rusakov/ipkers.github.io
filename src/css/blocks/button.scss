@@ -38,3 +38,13 @@
 .welcome-section__social-icon {
     fill: $text-color;
 }
+
+@include tablet-sm {
+    .main-button {
+        font-size: 14px;
+    }
+
+    .secondary-button {
+        font-size: 14px;
+    }
+}

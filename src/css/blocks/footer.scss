@@ -150,3 +150,17 @@
         margin-bottom: 15px;
     }
 }
+
+@include tablet-sm {
+    .footer__logo {
+        width: 100px;
+    }
+
+    .footer__policy-text {
+        font-size: 14px;
+    }
+
+    .footer__copyright {
+        font-size: 14px;
+    }
+}

@@ -175,19 +175,20 @@
 
 @include tablet-sm {
     .contacts {
-        padding: 70px 0;
+        padding: 50px 0;
     }
     
     .contacts__title {
-        font-size: 26px;
+        font-size: 20px;
     }
 
     .contacts__description {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
+        font-size: 14px;
     }
 
     .contacts__text {
-        font-size: 16px;
+        font-size: 14px;
         margin-bottom: 7px;
     }
 
@@ -201,5 +202,13 @@
 
     .contacts__submit {
         width: 100%;
+    }
+
+    .contacts__checkbox-text {
+        font-size: 14px;
+    }
+
+    .contacts__checkbox-label {
+        width: 210px;
     }
 }

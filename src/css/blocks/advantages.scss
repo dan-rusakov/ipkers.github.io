@@ -77,15 +77,16 @@
 
 @include tablet-sm {
     .advantages {
-        padding: 70px 0;
+        padding: 50px 0;
     }
     
     .advantages__title {
-        font-size: 26px;
+        font-size: 20px;
     }
 
     .advantages__description {
         margin-bottom: 40px;
+        font-size: 14px;
     }
 
     .advantages__carousel {

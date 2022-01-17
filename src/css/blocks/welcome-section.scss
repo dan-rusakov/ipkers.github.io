@@ -99,7 +99,7 @@
 
 @include tablet-sm {
     .welcome-section {
-        height: 480px;
+        height: 410px;
         position: relative;
         background-position-x: 60%;
 
@@ -115,14 +115,14 @@
     }
 
     .welcome-section__title {
-        font-size: 26px;
-        max-width: 380px;
+        font-size: 20px;
+        max-width: 190px;
         margin-bottom: 10px;
     }
 
     .welcome-section__description {
-        font-size: 18px;
-        max-width: 410px;
+        font-size: 14px;
+        max-width: 270px;
         margin-bottom: 20px;
     }
 

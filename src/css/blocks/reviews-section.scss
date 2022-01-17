@@ -77,22 +77,23 @@
 
 @include tablet-sm {
     .reviews-section {
-        padding: 70px 0;
+        padding: 50px 0;
     }
     
     .reviews-section__title {
-        font-size: 26px;
+        font-size: 20px;
     }
 
     .reviews-section__description {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        font-size: 14px;
     }
 }
 
 @include phone-lg {
     .reviews-section__reviews-grid {
         grid-row-gap: 0;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
 
     .reviews-section__show-more-button {

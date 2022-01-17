@@ -64,3 +64,29 @@
 .tour-card__more-button {
     width: 100%;
 }
+
+@include tablet-sm {
+    .tour-card__img-box {
+        height: 160px;
+    }
+
+    .tour-card__title {
+        font-size: 18px;
+    }
+
+    .tour-card__dates {
+        font-size: 14px;
+    }
+
+    .tour-card__tour-length {
+        font-size: 14px;
+    }
+
+    .tour-card__price {
+        font-size: 16px;
+    }
+
+    .tour-card__time-to-start {
+        font-size: 14px;
+    }
+}

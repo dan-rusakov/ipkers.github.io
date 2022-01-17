@@ -86,19 +86,25 @@
 
 @include tablet-sm {
     .our-team {
-        padding: 70px 0;
+        padding: 50px 0;
     }
     
     .our-team__title {
-        font-size: 26px;
+        font-size: 20px;
     }
 
     .our-team__description {
         margin-bottom: 40px;
+        font-size: 14px;
     }
 
     .our-team__teammate-card:nth-child(3) {
         display: none;
+    }
+
+    .our-team__teammates-grid {
+        grid-row-gap: 30px;
+        margin-bottom: 30px;
     }
 }
 

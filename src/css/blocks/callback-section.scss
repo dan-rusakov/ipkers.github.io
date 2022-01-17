@@ -126,15 +126,16 @@
 
 @include tablet-sm {
     .callback-section {
-        padding: 70px 0;
+        padding: 50px 0;
     }
     
     .callback-section__title {
-        font-size: 26px;
+        font-size: 20px;
     }
 
     .callback-section__description {
         margin-bottom: 40px;
+        font-size: 14px;
     }
 
     .callback-section__carousel {

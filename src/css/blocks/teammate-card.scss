@@ -58,3 +58,9 @@
         font-size: 14px;
     }
 }
+
+@include tablet-sm {
+    .teammate-card__img-box {
+        margin-bottom: 15px;
+    }
+}
