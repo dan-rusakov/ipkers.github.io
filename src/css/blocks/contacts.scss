@@ -46,6 +46,10 @@
     margin-bottom: 25px;
 }
 
+.contacts__email {
+    text-transform: lowercase;
+}
+
 .contacts__social-list {
     display: flex;
 }
@@ -122,7 +126,17 @@
     }
 }
 
-.contacts__checkbox-input:checked + .contacts__checkbox::before {
+.contacts__checkbox-icon {
+    fill: $text-color;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: .25s opacity ease;
+}
+
+.contacts__checkbox-input:checked + .contacts__checkbox .contacts__checkbox-icon {
     opacity: 1;
 }
 
