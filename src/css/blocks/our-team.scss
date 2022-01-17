@@ -51,6 +51,16 @@
     .our-team__teammates-grid {
         grid-row-gap: 50px;
     }
+
+    .our-team__teammate-card {
+        display: none;
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+            display: block;
+        }
+    }
 }
 
 @include tablet-md {
@@ -85,6 +95,10 @@
 
     .our-team__description {
         margin-bottom: 40px;
+    }
+
+    .our-team__teammate-card:nth-child(3) {
+        display: none;
     }
 }
 

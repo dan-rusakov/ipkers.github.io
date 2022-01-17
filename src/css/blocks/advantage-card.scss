@@ -50,6 +50,10 @@
     }
 
     .advantage-card__text {
-        font-size: 14px;
+        display: none;
+    }
+
+    .advantages__cards-grid {
+        grid-row-gap: 30px;
     }
 }

@@ -79,6 +79,14 @@
     transition: .25s transform ease;
 }
 
+.current-tours__mobile-carousel {
+    display: none;
+    width: calc(100% + 30px);
+    overflow: hidden;
+    overflow-x: scroll;
+    margin-left: -15px;
+}
+
 @include tablet-lg {
     .current-tours__description {
         margin-bottom: 50px;
@@ -117,7 +125,28 @@
     }
 
     .current-tours__carousel {
-        margin-bottom: 40px;
+        display: none;
+    }
+
+    .current-tours__mobile-carousel {
+        display: flex;
+    }
+
+    .current-tours__tour-card {
+        width: 220px;
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 15px;
+        }
+
+        &:first-child {
+            margin-left: 15px;
+        }
+    }
+
+    .current-tours__carousel-progress {
+        display: none;
     }
 }
 
