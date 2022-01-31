@@ -6,10 +6,11 @@
 
 .main-menu__item {
     display: inline-block;
-    margin: 0 20px;
+    margin: 3px 20px;
 }
 
 .main-menu__link {
+    color: $text-color;
     font-size: 18px;
     font-weight: $semibold;
     text-transform: uppercase;
@@ -19,6 +20,8 @@
 
     &:hover, &:focus {
         border-bottom-color: $text-color;
+        border-width: 2px !important;
+        color: $text-color !important;
     }
 }
 

@@ -26,9 +26,14 @@
 }
 
 .header__phone-number {
+    color: $text-color;
     font-size: 24px;
     font-weight: $bold;
     display: block;
+
+    &:hover {
+        color: $text-color !important;
+    }
 }
 
 .header__callback-button {
