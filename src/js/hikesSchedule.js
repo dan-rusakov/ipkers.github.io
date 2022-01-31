@@ -30,7 +30,7 @@ activityButtons.forEach((button, index) => {
     button.addEventListener('click', (evt) => onActivityTypeSelect(evt, index));
 });
 
-showMonthsButton.addEventListener('click', () => {
+showMonthsButton?.addEventListener('click', () => {
     activityCalendars.forEach(calendar => {
         if (calendar.classList.contains('active')) {
             calendar.classList.add('show-full');

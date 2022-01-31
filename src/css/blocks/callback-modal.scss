@@ -32,15 +32,41 @@
 
 .callback-modal__input {
     display: block;
-    width: 305px;
     margin: 0 auto 10px;
-    border-color: $gray;
+
+    // fix for impreza theme
+    width: 305px !important;
+    padding: 12px !important;
+    background-color: $white !important;
+    border: 1px solid $gray !important;
+    font-size: 18px !important;
+    line-height: 22px !important;
+    color: $text-color !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
 }
 
 .callback-modal__submit {
     width: 305px;
     margin-bottom: 12px;
-    border: 0;
+
+    // fix for impreza theme
+    border: 0 !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #fff !important;
+    letter-spacing: 0 !important;
+    padding: 14px !important;
+
+    &:hover {
+        color: $white !important;
+        background-color: lighten($red, 40%) !important;
+    }
+}
+
+// fix for impreza theme
+.callback-modal__submit + .wpcf7-spinner {
+    display: none;
 }
 
 .callback-modal__checkbox-label {
