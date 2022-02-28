@@ -1,5 +1,7 @@
 .tour-card {
-
+    display: flex;
+    flex-direction: column;
+    height: auto;
 }
 
 .tour-card__img-box {
@@ -30,12 +32,14 @@
     padding-bottom: 22px;
     border-bottom: 1px solid $gray;
     margin-bottom: 9px;
+    margin-top: auto;
 }
 
 .tour-card__dates {
     font-size: 18px;
     color: $gray;
     margin-right: 10px;
+    margin-bottom: 0;
 }
 
 .tour-card__tour-length {
@@ -63,6 +67,10 @@
 
 .tour-card__more-button {
     width: 100%;
+
+    &:hover {
+        color: $white !important;
+    }
 }
 
 @include tablet-sm {
