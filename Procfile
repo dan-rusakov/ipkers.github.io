@@ -1,1 +1,1 @@
-web: mv dist/* /
+web: node server.js
