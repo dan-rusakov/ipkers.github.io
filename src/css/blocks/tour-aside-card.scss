@@ -5,6 +5,7 @@
   position: sticky;
   top: 40px;
   margin-bottom: 40px;
+  background-color: $white;
 }
 
 .tour-aside-card__dates-title {
@@ -48,4 +49,152 @@
 
 .tour-aside-card__order-button {
   width: 100%;
+}
+
+.tour-aside-card__preview-date {
+  display: none;
+}
+
+@include screen-sm {
+  .tour-aside-card {
+    top: 0;
+    left: 0;
+    order: -1;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 20px;
+    margin-bottom: 30px;
+  }
+
+  .tour-aside-card__order-button {
+    width: 200px;
+    margin-left: auto;
+  }
+
+  .tour-aside-card__date {
+    width: auto;
+  }
+
+  .tour-aside-card__dates-title {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+  }
+
+  .tour-aside-card__preview-date {
+    display: block;
+    border-bottom: none;
+    position: relative;
+    padding-right: 34px;
+    margin-right: 50px;
+    margin-top: auto;
+    padding-bottom: 5px;
+  }
+
+  .tour-aside-card__preview-date:focus + .tour-aside-card__dates-list {
+    display: block;
+  }
+
+  .tour-aside-card__dates-list {
+    display: none;
+    margin-bottom: 0;
+    justify-self: flex-end;
+    position: absolute;
+    left: -1px;
+    background-color: $white;
+    padding: 7px 20px;
+    border: 1px solid #e5e5e5;
+    top: 73px;
+  }
+
+  .tour-aside-card__price {
+    margin-bottom: 0;
+    margin-top: auto;
+    position: relative;
+
+    &::before {
+      content: "Цена";
+      font-size: 14px;
+      font-weight: $regular;
+      color: $gray;
+      position: absolute;
+      left: 0;
+      top: -15px;
+    }
+  }
+
+  .tour-aside-card__dates-arrow {
+    fill: $text-color;
+    position: absolute;
+    right: 0;
+    top: 15px;
+  }
+}
+
+@include tablet-md {
+  .tour-aside-card__date {
+    font-size: 15px;
+  }
+
+  .tour-aside-card__dates-arrow {
+    width: 14px;
+    height: 14px;
+  }
+
+  .tour-aside-card__preview-date {
+    padding-right: 25px;
+    margin-right: 35px;
+  }
+
+  .tour-aside-card__price {
+    font-size: 20px;
+
+    &::before {
+      top: -18px;
+    }
+  }
+}
+
+@include tablet-sm {
+  .tour-aside-card {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tour-aside-card__preview-date {
+    padding-top: 5px;
+    margin-bottom: 15px;
+  }
+
+  .tour-aside-card__dates-title {
+    position: static;
+  }
+
+  .tour-aside-card__dates-arrow {
+    top: 9px;
+  }
+
+  .tour-aside-card__price::before {
+    position: static;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .tour-aside-card__order-button {
+    width: 100%;
+  }
+
+  .tour-aside-card__price {
+    margin-bottom: 20px;
+  }
+
+  .tour-aside-card__dates-list {
+    top: 65px;
+    z-index: 1;
+    padding: 7px 21px;
+  }
 }

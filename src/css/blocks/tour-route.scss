@@ -43,3 +43,25 @@
   margin-right: 25px;
   background-color: $white;
 }
+
+@include screen-sm {
+  .tour-route {
+    margin-bottom: 50px;
+  }
+}
+
+@include tablet-lg {
+  .tour-route {
+    margin-bottom: 40px;
+  }
+}
+
+@include tablet-md {
+  .tour-route__time {
+    margin-right: 20px;
+  }
+
+  .tour-route__item {
+    font-size: 14px;
+  }
+}

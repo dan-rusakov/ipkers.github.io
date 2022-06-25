@@ -28,3 +28,50 @@
   margin-bottom: 80px;
   color: $text-color;
 }
+
+@include screen-sm {
+  .tour-main-content {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .tour-main-content-wrapper {
+    flex-direction: column;
+  }
+
+  .tour-description {
+    margin-bottom: 50px;
+  }
+
+  .tour-extra-content-wrapper {
+    margin-bottom: 30px;
+  }
+}
+
+@include tablet-lg {
+  .tour-main-content__title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .tour-description {
+    margin-bottom: 40px;
+  }
+}
+
+@include tablet-md {
+  .tour-main-content__title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .tour-description {
+    font-size: 14px;
+  }
+}
+
+@include tablet-sm {
+  .tour-extra-content-wrapper {
+    margin-bottom: 20px;
+  }
+}

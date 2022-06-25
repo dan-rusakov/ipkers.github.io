@@ -25,3 +25,37 @@
   margin-bottom: 35px;
   background-color: transparent;
 }
+
+@include screen-sm {
+  .tour-attractions {
+    margin: 50px 0 40px;
+  }
+
+  .tour-attractions__gallery-mark {
+    margin-bottom: 30px;
+  }
+}
+
+@include tablet-lg {
+  .tour-attractions {
+    margin: 40px 0 30px;
+  }
+
+  .tour-attractions__attraction-title {
+    margin-bottom: 10px;
+  }
+
+  .tour-attractions__gallery-mark {
+    margin-bottom: 20px;
+  }
+}
+
+@include tablet-md {
+  .tour-attractions__attraction-title {
+    font-size: 16px;
+  }
+
+  .tour-attractions__attraction-text {
+    font-size: 14px;
+  }
+}

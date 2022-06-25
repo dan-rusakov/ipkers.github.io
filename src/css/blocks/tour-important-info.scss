@@ -22,3 +22,35 @@
   font-weight: $semibold;
   color: $text-color;
 }
+
+@include screen-sm {
+  .tour-important-info {
+    margin-bottom: 50px;
+  }
+}
+
+@include tablet-lg {
+  .tour-important-info {
+    margin-bottom: 40px;
+  }
+
+  .tour-important-info__description {
+    font-size: 16px;
+  }
+
+  .tour-important-info__image {
+    margin-bottom: 10px;
+  }
+
+  .tour-important-info__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 60px;
+  }
+}
+
+@include tablet-sm {
+  .tour-important-info__grid {
+    grid-template-columns: 1fr;
+    grid-row-gap: 30px;
+  }
+}

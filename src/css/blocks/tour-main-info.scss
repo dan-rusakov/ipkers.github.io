@@ -122,3 +122,94 @@
   background-color: $white;
   position: relative;
 }
+
+@include screen-sm {
+  .tour-main-info {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  .tour-main-info__preview {
+    margin-bottom: 25px;
+  }
+
+  .tour-main-info__title {
+    margin-bottom: 40px;
+  }
+
+  .tour-main-info__info-grid {
+    margin-bottom: 35px;
+  }
+
+  .tour-main-info__trail-list {
+    row-gap: 10px;
+  }
+}
+
+@include tablet-lg {
+  .tour-main-info__preview {
+    height: 320px;
+  }
+
+  .tour-main-info__title {
+    font-size: 24px;
+  }
+
+  .tour-main-info__info-grid {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+  }
+
+  .tour-main-info__info-card {
+    width: 200px;
+  }
+}
+
+@include tablet-md {
+  .tour-main-info__title {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .tour-main-info {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .tour-main-info__preview {
+    margin-bottom: 20px;
+  }
+
+  .tour-main-info__info-parameter {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  .tour-main-info__info-value {
+    font-size: 14px;
+  }
+
+  .tour-main-info__info-card {
+    width: calc(50% - 10px);
+  }
+
+  .tour-main-info__trail-title {
+    font-size: 18px;
+  }
+
+  .tour-main-info__trail-item {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+}
+
+@include tablet-sm {
+  .tour-main-info__preview {
+    height: 190px;
+  }
+
+  .tour-main-info {
+    padding-bottom: 35px;
+  }
+}
